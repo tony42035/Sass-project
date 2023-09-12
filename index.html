@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人簡歷 - 使用Sass變數開發</title>
+
+    <link rel="stylesheet" href="./stylesheets/all.css">
+    <style>
+        .bg-cover{
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+        .bg-attachment-fiexd{
+            background-attachment: fixed;
+        }
+        .deco-box{
+            height: 200px;
+            width: 200px;
+            background-color: var(--bs-secondary);
+        }
+        .object-fit-cover{
+            object-fit: cover;
+        }
+        .bg-dark-gradient{
+            background-image: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,.8));
+        }
+    </style>
+</head>
+<body>
+    <header class="min-vh-100 position-relative">
+        <div class="deco-box position-absolute top-0 start-0"></div>
+        <div class="deco-box position-absolute bottom-0 end-0"></div>
+        <div class="position-absolute bg-cover bg-attachment-fiexd" style="top: 30px; right: 30px; left: 30px; bottom: 30px; background-image: url(https://images.unsplash.com/photo-1612282130134-49784d98ac61?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1836&q=80);"></div>
+        <div class="position-absolute top-50 start-50 text-center text-white translate-middle">
+            <h1 class="display-1 fw-bold">粉穗幸 谷澤</h1>
+            <hr class="mb-2 mx-n5">
+            <h2>That's hurt</h2>
+            <p>這、真的有夠痛。</p>
+        </div>
+    </header>
+    <div class="container py-5">
+        <div class="row justify-content-center gy-5 flex-md-row-reverse">
+
+            <div class="col-md-4">
+                <img src="https://images.unsplash.com/photo-1612282131240-6e878907d0f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2021&q=80" alt=""
+                class="w-100 object-fit-cover" height="500">
+            </div>
+
+            <div class="col-md-5 d-flex align-items-center">
+                <div>
+                    <h2 class="display-4">谷澤的故事：</h2>
+                    <p>妻子送醫確認重傷，有腦震盪、鼻骨骨折</p>
+                    <p>
+                        事後高雄市警方在案發後逮捕宋姓、辛姓兩名嫌犯，動手的宋男辯稱是因行車糾紛，否認與董監事改選有關，辛男則稱只是開車載人，不知道宋男去打人。</p>
+                    <a href="#" class="btn btn-outline-primary w-100 mt-4">看更多<del>骨折</del>谷澤的故事</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-light py-5 m-md-5 p-md-5">
+        <div class="container">
+            <h2 class="display-4 text-center mb-4">我的實戰作品</h2>
+
+            <div class="row row-cols-1 row-cols-lg-3 g-4">
+                <div class="col">
+                    <div class="card text-white border-5 h-100">
+                        <img src="https://images.unsplash.com/photo-1614274357232-c1336fe66ea3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80" class="card-img h-100" alt="...">
+                        <div class="card-img-overlay top-auto bg-dark-gradient">
+                        <h5 class="card-title fw-bold">閉鎖性骨折</h5>
+                        <p class="card-text">又稱為簡單骨折，即斷骨未凸出皮膚表面。</p>
+                        <a href="#" class="btn btn-outline-light stretched-link w-100">看作品</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col">
+                    <div class="card text-white border-5 h-100">
+                        <img src="https://images.unsplash.com/photo-1516069677018-378515003435?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1858&q=80" class="card-img h-100 object-fit-cover" alt="...">
+                        <div class="card-img-overlay top-auto bg-dark-gradient">
+                        <h5 class="card-title fw-bold">開放性骨折</h5>
+                        <p class="card-text">又名為複雜性骨折，即斷骨已刺穿皮膚表面，出現開放性的傷口。</p>
+                        <a href="#" class="btn btn-outline-light stretched-link w-100">看作品</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card text-white border-5 h-100">
+                        <img src="https://images.unsplash.com/photo-1530497610245-94d3c16cda28?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1964&q=80" class="card-img h-100 object-fit-cover" alt="...">
+                        <div class="card-img-overlay top-auto bg-dark-gradient">
+                        <h5 class="card-title fw-bold">粉碎性骨折</h5>
+                        <p class="card-text">因嚴重外力使骨頭碎裂成細碎粉狀。</p>
+                        <a href="#" class="btn btn-outline-light stretched-link w-100">看作品</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
