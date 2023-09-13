@@ -1,4 +1,13 @@
 @import "../node_modules/bootstrap/scss/functions";
+
 @import "./helpers/variables";
 
+
 @import "../node_modules/bootstrap/scss/bootstrap";
+@import "./helpers/utilities";
+
+
+@import "./components/deco-box";
+@import "./components/utilities";
+
+@import "../node_modules/bootstrap/scss/utilities/api";
